@@ -1,5 +1,6 @@
 # PRB-SI
 Zajęcia z Sieci neuronowych
+
 Grupa: Michał Rogowski, Emil Pliszka, Konrad Błaszkiewicz
 
 Problem plecakowy:
