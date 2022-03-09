@@ -1,5 +1,4 @@
-# PRB-SI
-Zajęcia z Sieci neuronowych
+#Zajęcia z Sieci neuronowych
 
 Grupa: Michał Rogowski, Emil Pliszka, Konrad Błaszkiewicz
 
