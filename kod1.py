@@ -9,7 +9,7 @@ with open("items_PRB.csv", "r") as file:
     reader = csv.reader(file)
     while True:
         next(reader)
-        rand = randint(1, 999)
+        rand = randint(1, 1000)
         for row in reader:
             if int(row[0]) == rand:
                 if int(row[2]) > limit-suma: break
