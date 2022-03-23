@@ -2,21 +2,23 @@ import csv
 from random import randint
 
 limit = 1000
-#rand = randint(1, 1001)
 suma = 0
 wyniki = []
 with open("items_PRB.csv", "r") as file:
     reader = csv.reader(file)
     while True:
-        next(reader)
         rand = randint(1, 1000)
+        next(reader)
         for row in reader:
             if int(row[0]) == rand:
-                if int(row[2]) > limit-suma: break
-                suma += int(row[2])
+                suma = suma + int(row[2])
+                if suma >= limit:
+                    suma=suma-int(row[2])
+                    break
                 wyniki.append(row)
-                print(suma)
-        if suma >= limit: break
+                #print(suma)
+        if suma + int(row[2]) >= limit:
+            break
         file.seek(0)
-
+#print(suma)
 print(wyniki)
