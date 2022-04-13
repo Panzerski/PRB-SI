@@ -19,6 +19,6 @@ with open("items_PRB.csv", "r") as file:
                 #print(suma)
         if suma >= limit: break
         file.seek(0)
-print("%.1f" % waga)
-print(suma)
+print("waga:  %.1f" % waga)
+print("cena: ",suma)
 print(wyniki)
