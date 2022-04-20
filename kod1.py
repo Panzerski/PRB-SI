@@ -6,12 +6,12 @@ HM = []
 HMS = 10
 suma = [0] * HMS
 waga = [0] * HMS
-wyniki = []
+
 
 with open("items_PRB.csv", "r") as file:
     reader = csv.reader(file)
-    for i in range(0, HMS):
-        wyniki.clear()
+    for i in range(HMS):
+        wyniki = []
         while True:
             next(reader)
             rand = randint(1, 1000)
@@ -22,13 +22,17 @@ with open("items_PRB.csv", "r") as file:
                     suma[i] += int(row[2])
                     waga[i] += float(row[3])
                     wyniki.append(row)
-                    # print(suma)
             if suma[i] >= limit:
+
                 break
             file.seek(0)
-        file.seek(0)
-        HM.append(wyniki)
-        print("waga:  %.1f" % waga[i])
-        print("cena: ", suma[i])
 
-print(HM)
+        HM.append(wyniki)
+        del(wyniki)
+        file.seek(0)
+
+        #print("waga:  %.1f" % waga[i])
+        #print("cena: ", suma[i])
+
+for i in HM:
+    print(i)
